@@ -10,7 +10,7 @@ class Solution
 public:
     vector<string> restoreIpAddresses(string s)
     {
-        vector<string> ret;
+        vector<string> ans;
         for (int a = 1; a <= 3; a++)
         {
             for (int b = 1; b <= 3; b++)
@@ -29,14 +29,14 @@ public:
                             {
                                 string ans = to_string(A) + "." + to_string(B) + "." + to_string(C) + "." + to_string(D);
                                 if (ans.length() == s.length() + 3)
-                                    ret.push_back(ans);
+                                    ans.push_back(ans);
                             }
                         }
                     }
                 }
             }
         }
-        return ret;
+        return ans;
     }
 };
 // @lc code=end
